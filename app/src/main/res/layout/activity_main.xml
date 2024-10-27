@@ -7,23 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/EditSeconds"
+
+    <!--штука для принятия времени-->
+
+    <TimePicker
+        android:id="@+id/timePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Укажите количество секунд"
+        android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <ToggleButton
         android:id="@+id/TimerStarter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Запустить таймер"
-        app:layout_constraintTop_toBottomOf="@+id/EditSeconds"
-        app:layout_constraintStart_toStartOf="@+id/EditSeconds"
-        app:layout_constraintEnd_toEndOf="@+id/EditSeconds"/>
+        android:text="поставить будильник"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker"
+        app:layout_constraintStart_toStartOf="@+id/timePicker"
+        app:layout_constraintEnd_toEndOf="@+id/timePicker"
+        android:checked="false"
+        android:onClick="OnToggleClicked" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
