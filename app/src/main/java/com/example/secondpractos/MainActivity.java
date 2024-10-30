@@ -25,7 +25,6 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button btnStartAlarm;
-    Button btnEndAlarm;
     TimePicker alarmTimePicker;
     AlarmManager alarmManager;
     PendingIntent pendingIntent;
